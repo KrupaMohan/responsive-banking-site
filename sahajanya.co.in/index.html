@@ -20,154 +20,99 @@
 </head>
 <body>
     <!-- Top Bar -->
-    <div class="top-bar">
-        <div class="container">
-            <div class="d-flex justify-content-between align-items-center py-2">
-                <div class="d-flex align-items-center">
-                    <div class="me-4">
-                        <i class="fas fa-phone-alt me-1 text-primary"></i>
-                        <a href="tel:18001234567" class="text-dark text-decoration-none">1800 123 4567</a>
-                    </div>
-                    <div class="d-none d-md-block">
-                        <i class="fas fa-envelope me-1 text-primary"></i>
-                        <a href="mailto:info@sahajanya.co.in" class="text-dark text-decoration-none">info@sahajanya.co.in</a>
-                    </div>
-                </div>
-                <div class="d-flex align-items-center">
-                    <div class="me-3">
-                        <button class="btn btn-sm btn-outline-primary rounded-pill px-3" id="languageToggle">
-                            <i class="fas fa-globe me-1"></i>
-                            <span class="lang-en">ಕನ್ನಡ</span>
-                            <span class="lang-kn d-none">English</span>
-                        </button>
-                    </div>
-                    <div class="social-links">
-                        <a href="#" class="text-dark me-2" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="text-dark me-2" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="text-dark me-2" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="text-dark" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
+    <div class="top-bar bg-gradient-primary text-white py-1">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center gap-3">
+                <span><i class="fas fa-phone-alt me-1"></i> 1800 123 4567</span>
+                <span class="d-none d-md-inline"><i class="fas fa-envelope me-1"></i> info@sahajanya.co.in</span>
+            </div>
+            <div class="d-flex align-items-center gap-3">
+                <button class="btn btn-sm btn-outline-light rounded-pill px-3" id="languageToggle">
+                    <i class="fas fa-globe me-1"></i>
+                    <span class="lang-en">ಕನ್ನಡ</span>
+                    <span class="lang-kn d-none">English</span>
+                </button>
+                <div class="social-links d-none d-md-flex gap-2">
+                    <a href="#" class="text-white" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-white" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-white" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-white" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                 </div>
             </div>
         </div>
     </div>
 
     <!-- Main Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-light shadow-sm bg-white sticky-top border-bottom">
         <div class="container">
-            <a class="navbar-brand" href="index.html">
-                <div class="d-flex align-items-center">
-                    <img src="images/logo.png" alt="Sahajanya Bank" class="logo">
-                    <div class="ms-3 d-none d-md-block">
-                        <h1 class="bank-name mb-0">Sahajanya Bank</h1>
-                        <p class="bank-tagline mb-0">A SMSCL Enterprise</p>
-                    </div>
+            <a class="navbar-brand d-flex align-items-center gap-2 py-2" href="index.html">
+                <img src="images/logo.png" alt="Sahajanya Bank" class="logo" style="height:48px;width:auto;">
+                <div class="d-none d-md-block">
+                    <span class="fw-bold text-primary fs-4 lh-1">Sahajanya Bank</span><br>
+                    <span class="text-muted small lh-1">A SMSCL Enterprise</span>
                 </div>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="mainNavbar">
-                <ul class="navbar-nav mx-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#home">Home</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-                            Personal Banking
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#savings">Savings Account</a></li>
-                            <li><a class="dropdown-item" href="#current">Current Account</a></li>
-                            <li><a class="dropdown-item" href="#fixed-deposits">Fixed Deposits</a></li>
-                            <li><a class="dropdown-item" href="#recurring-deposits">Recurring Deposits</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-                            Loans
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#home-loan">Home Loan</a></li>
-                            <li><a class="dropdown-item" href="#personal-loan">Personal Loan</a></li>
-                            <li><a class="dropdown-item" href="#business-loan">Business Loan</a></li>
-                            <li><a class="dropdown-item" href="#education-loan">Education Loan</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-                            Digital Banking
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#internet-banking">Internet Banking</a></li>
-                            <li><a class="dropdown-item" href="#mobile-banking">Mobile Banking</a></li>
-                            <li><a class="dropdown-item" href="#debit-cards">Debit Cards</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#investments">Investments</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">About Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
+                <ul class="navbar-nav mx-auto text-uppercase fw-semibold gap-lg-2">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about-us.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Financial Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Membership</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Downloads</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact-us.html">Contact Us</a></li>
                 </ul>
-                <div class="d-flex align-items-center">
-                    <a href="#login" class="btn btn-outline-primary me-2">Login</a>
-                    <a href="#register" class="btn btn-primary">Register</a>
+                <div class="d-flex align-items-center gap-2 ms-lg-3">
+                    <a href="#login" class="btn btn-outline-primary rounded-pill px-3">Login</a>
+                    <a href="#register" class="btn btn-primary rounded-pill px-3">Register</a>
                 </div>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero-section" id="home">
+    <section class="hero-section bg-gradient-primary text-white py-5" id="home">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-lg-6 hero-content" data-aos="fade-right">
-                    <span class="hero-badge">
-                        <i class="fas fa-star me-2"></i>Welcome to Sahajanya
-                    </span>
-                    <h1 class="hero-title">Banking Made Simple, Secure & Rewarding</h1>
-                    <p class="hero-subtitle">Experience the future of banking with our innovative digital solutions tailored for your needs.</p>
-                    <div class="hero-cta">
-                        <a href="#open-account" class="btn btn-light btn-lg px-4">
-                            <i class="fas fa-user-plus me-2"></i>Open Account
-                        </a>
-                        <a href="#mobile-app" class="btn btn-outline-light btn-lg px-4">
-                            <i class="fas fa-mobile-alt me-2"></i>Download App
-                        </a>
+                <div class="col-lg-7 mb-4 mb-lg-0">
+                    <span class="badge bg-white text-primary fw-bold mb-3 px-3 py-2 rounded-pill shadow-sm">Welcome to Sahajanya</span>
+                    <h1 class="display-4 fw-bold mb-3">Banking Made Simple, Secure & Rewarding</h1>
+                    <p class="lead mb-4">Experience the future of banking with our innovative digital solutions tailored for your needs.</p>
+                    <div class="d-flex flex-wrap gap-3 mb-4">
+                        <a href="#open-account" class="btn btn-warning text-dark fw-bold rounded-pill px-4 py-2 shadow-sm"><i class="fas fa-user-plus me-2"></i>Open Account</a>
+                        <a href="#mobile-app" class="btn btn-outline-light fw-bold rounded-pill px-4 py-2"><i class="fas fa-mobile-alt me-2"></i>Download App</a>
                     </div>
-                    <div class="hero-features">
-                        <div class="feature-item">
-                            <div class="feature-icon">
-                                <i class="fas fa-check"></i>
+                    <div class="row g-3 mt-2">
+                        <div class="col-6 col-md-3">
+                            <div class="d-flex align-items-center gap-2">
+                                <span class="bg-white text-primary rounded-circle d-flex align-items-center justify-content-center" style="width:40px;height:40px;"><i class="fas fa-check"></i></span>
+                                <span class="fw-semibold">Zero Balance</span>
                             </div>
-                            <span class="feature-text">Zero Balance Account</span>
                         </div>
-                        <div class="feature-item">
-                            <div class="feature-icon">
-                                <i class="fas fa-bolt"></i>
+                        <div class="col-6 col-md-3">
+                            <div class="d-flex align-items-center gap-2">
+                                <span class="bg-white text-primary rounded-circle d-flex align-items-center justify-content-center" style="width:40px;height:40px;"><i class="fas fa-bolt"></i></span>
+                                <span class="fw-semibold">Instant Loan</span>
                             </div>
-                            <span class="feature-text">Instant Loan Approval</span>
                         </div>
-                        <div class="feature-item">
-                            <div class="feature-icon">
-                                <i class="fas fa-shield-alt"></i>
+                        <div class="col-6 col-md-3">
+                            <div class="d-flex align-items-center gap-2">
+                                <span class="bg-white text-primary rounded-circle d-flex align-items-center justify-content-center" style="width:40px;height:40px;"><i class="fas fa-shield-alt"></i></span>
+                                <span class="fw-semibold">Secure</span>
                             </div>
-                            <span class="feature-text">Secure Banking</span>
                         </div>
-                        <div class="feature-item">
-                            <div class="feature-icon">
-                                <i class="fas fa-headset"></i>
+                        <div class="col-6 col-md-3">
+                            <div class="d-flex align-items-center gap-2">
+                                <span class="bg-white text-primary rounded-circle d-flex align-items-center justify-content-center" style="width:40px;height:40px;"><i class="fas fa-headset"></i></span>
+                                <span class="fw-semibold">24/7 Support</span>
                             </div>
-                            <span class="feature-text">24/7 Support</span>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6" data-aos="fade-left">
+                <div class="col-lg-5">
                     <div class="card shadow-lg border-0 rounded-3 overflow-hidden">
                         <div class="card-header bg-primary text-white p-4">
                             <h4 class="mb-0">EMI Calculator</h4>
@@ -462,9 +407,8 @@
                     <h5>Quick Links</h5>
                     <ul class="list-unstyled">
                         <li><a href="#" class="text-white-50">About Us</a></li>
-                        <li><a href="#" class="text-white-50">Careers</a></li>
                         <li><a href="#" class="text-white-50">Contact Us</a></li>
-                        <li><a href="#" class="text-white-50">Sitemap</a></li>
+                        <li><a href="#" class="text-white-50">Locate Us</a></li>
                     </ul>
                 </div>
                 <div class="col-md-3 mb-4">
@@ -472,8 +416,6 @@
                     <ul class="list-unstyled">
                         <li><a href="#" class="text-white-50">Savings Accounts</a></li>
                         <li><a href="#" class="text-white-50">Loans</a></li>
-                        <li><a href="#" class="text-white-50">Credit Cards</a></li>
-                        <li><a href="#" class="text-white-50">Investments</a></li>
                     </ul>
                 </div>
                 <div class="col-md-3 mb-4">
@@ -481,8 +423,6 @@
                     <ul class="list-unstyled">
                         <li><a href="#" class="text-white-50">FAQs</a></li>
                         <li><a href="#" class="text-white-50">Complaints</a></li>
-                        <li><a href="#" class="text-white-50">Track Application</a></li>
-                        <li><a href="#" class="text-white-50">Locate Us</a></li>
                     </ul>
                 </div>
                 <div class="col-md-3 mb-4">

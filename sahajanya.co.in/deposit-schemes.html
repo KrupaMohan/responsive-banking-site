@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deposit Schemes | Sahajanya Bank</title>
+    <link rel="icon" type="image/svg+xml" href="images/logo-icon.svg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Kannada:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body { font-family: 'Poppins', Arial, sans-serif; }
+        .breadcrumb-area {
+            background: #f8f9fa;
+            border-bottom: 1px solid #e5e5e5;
+            padding: 1.5rem 0 1rem 0;
+        }
+        .breadcrumb {
+            background: none;
+            padding: 0;
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+        .breadcrumb .breadcrumb-item a { color: #003366; text-decoration: none; }
+        .breadcrumb .breadcrumb-item.active { color: #e30613; font-weight: 600; }
+        .deposit-heading {
+            font-size: 2.25rem;
+            font-weight: 800;
+            color: #003366;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .deposit-section {
+            padding: 2.5rem 0 2rem 0;
+        }
+        .deposit-cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+        }
+        .deposit-card {
+            background: #fff;
+            border: 2px solid #e30613;
+            border-radius: 1rem;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+            padding: 2rem 1.5rem 1.5rem 1.5rem;
+            max-width: 370px;
+            flex: 1 1 320px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            transition: box-shadow 0.2s, border-color 0.2s;
+        }
+        .deposit-card:hover {
+            box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+            border-color: #003366;
+        }
+        .deposit-icon {
+            font-size: 2.5rem;
+            color: #003366;
+            background: #ffc107;
+            border-radius: 50%;
+            width: 64px;
+            height: 64px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.25rem;
+        }
+        .deposit-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #e30613;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .deposit-desc {
+            color: #222;
+            font-size: 1.05rem;
+            margin-bottom: 1.25rem;
+        }
+        .deposit-table {
+            width: 100%;
+            margin-bottom: 1rem;
+            border-collapse: collapse;
+        }
+        .deposit-table th, .deposit-table td {
+            border: 1px solid #e5e5e5;
+            padding: 0.5rem 0.75rem;
+            text-align: left;
+        }
+        .deposit-table th {
+            background: #f8f9fa;
+            color: #003366;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.98rem;
+        }
+        .deposit-rate {
+            color: #e30613;
+            font-weight: 700;
+            font-size: 1.15rem;
+            letter-spacing: 0.5px;
+        }
+        .deposit-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        .deposit-list li {
+            position: relative;
+            padding-left: 2rem;
+            margin-bottom: 0.75rem;
+            font-size: 1.05rem;
+        }
+        .deposit-list li:before {
+            content: '\f111';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            color: #ffc107;
+            position: absolute;
+            left: 0;
+            top: 0.2rem;
+            font-size: 1rem;
+        }
+        @media (max-width: 991.98px) {
+            .deposit-cards { gap: 1.5rem; }
+            .deposit-card { max-width: 100%; }
+        }
+        @media (max-width: 767.98px) {
+            .deposit-heading { font-size: 1.5rem; }
+            .deposit-section { padding: 1.5rem 0; }
+            .deposit-cards { flex-direction: column; gap: 1.25rem; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Bar and Navbar (reuse from index.html) -->
+    <div class="top-bar bg-gradient-primary text-white py-1">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center gap-3">
+                <span><i class="fas fa-phone-alt me-1"></i> 1800 123 4567</span>
+                <span class="d-none d-md-inline"><i class="fas fa-envelope me-1"></i> info@sahajanya.co.in</span>
+            </div>
+            <div class="d-flex align-items-center gap-3">
+                <button class="btn btn-sm btn-outline-light rounded-pill px-3" id="languageToggle">
+                    <i class="fas fa-globe me-1"></i>
+                    <span class="lang-en">ಕನ್ನಡ</span>
+                    <span class="lang-kn d-none">English</span>
+                </button>
+                <div class="social-links d-none d-md-flex gap-2">
+                    <a href="#" class="text-white" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-white" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-white" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-white" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-light shadow-sm bg-white sticky-top border-bottom">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2 py-2" href="index.html">
+                <img src="images/logo.png" alt="Sahajanya Bank" class="logo" style="height:48px;width:auto;">
+                <div class="d-none d-md-block">
+                    <span class="fw-bold text-primary fs-4 lh-1">Sahajanya Bank</span><br>
+                    <span class="text-muted small lh-1">A SMSCL Enterprise</span>
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                <ul class="navbar-nav mx-auto text-uppercase fw-semibold gap-lg-2">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about-us.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Loan Schemes</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="deposit-schemes.html">Deposit Schemes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Financial Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Membership</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Downloads</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                </ul>
+                <div class="d-flex align-items-center gap-2 ms-lg-3">
+                    <a href="#login" class="btn btn-outline-primary rounded-pill px-3">Login</a>
+                    <a href="#register" class="btn btn-primary rounded-pill px-3">Register</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb and Heading -->
+    <div class="breadcrumb-area">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb mb-1">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Deposit Schemes</li>
+                </ol>
+            </nav>
+            <div class="deposit-heading">Deposit Schemes</div>
+        </div>
+    </div>
+
+    <!-- Deposit Schemes Section -->
+    <section class="deposit-section">
+        <div class="container">
+            <div class="deposit-cards">
+                <!-- Fixed Deposits -->
+                <div class="deposit-card">
+                    <div class="deposit-icon"><i class="fas fa-landmark"></i></div>
+                    <div class="deposit-title">Fixed Deposits</div>
+                    <div class="deposit-desc">Secure your future with our competitive fixed deposit rates and flexible tenures.</div>
+                    <table class="deposit-table">
+                        <tr><th>Tenure</th><th>Interest Rate</th></tr>
+                        <tr><td>1 Year</td><td class="deposit-rate">6.5%</td></tr>
+                        <tr><td>2 Years</td><td class="deposit-rate">6.75%</td></tr>
+                        <tr><td>3+ Years</td><td class="deposit-rate">7.0%</td></tr>
+                    </table>
+                    <ul class="deposit-list">
+                        <li>Flexible maturity options</li>
+                        <li>Premature withdrawal facility</li>
+                        <li>Loan against deposit available</li>
+                    </ul>
+                </div>
+                <!-- Recurring Deposits -->
+                <div class="deposit-card">
+                    <div class="deposit-icon"><i class="fas fa-calendar-alt"></i></div>
+                    <div class="deposit-title">Recurring Deposits</div>
+                    <div class="deposit-desc">Grow your savings with regular monthly deposits and attractive interest rates.</div>
+                    <table class="deposit-table">
+                        <tr><th>Tenure</th><th>Interest Rate</th></tr>
+                        <tr><td>1 Year</td><td class="deposit-rate">6.25%</td></tr>
+                        <tr><td>2 Years</td><td class="deposit-rate">6.5%</td></tr>
+                        <tr><td>3+ Years</td><td class="deposit-rate">6.75%</td></tr>
+                    </table>
+                    <ul class="deposit-list">
+                        <li>Monthly deposit as low as ₹500</li>
+                        <li>Flexible tenure options</li>
+                        <li>Premature closure allowed</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (reuse from index.html) -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 mb-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white-50">About Us</a></li>
+                        <li><a href="#" class="text-white-50">Contact Us</a></li>
+                        <li><a href="#" class="text-white-50">Locate Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5>Customer Service</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white-50">FAQs</a></li>
+                        <li><a href="#" class="text-white-50">Complaints</a></li>
+                        <li><a href="#" class="text-white-50">Track Application</a></li>
+                        <li><a href="#" class="text-white-50">Locate Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5>Contact Us</h5>
+                    <address class="text-white-50">
+                        <p><i class="fas fa-map-marker-alt me-2"></i> 123 Financial District, Hyderabad, India</p>
+                        <p><i class="fas fa-phone-alt me-2"></i> 1800 123 4567</p>
+                        <p><i class="fas fa-envelope me-2"></i> info@sahajanya.co.in</p>
+                    </address>
+                </div>
+            </div>
+            <hr class="bg-secondary">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2025 Sahajanya Bank. All Rights Reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-white-50 me-3">Privacy Policy</a>
+                    <a href="#" class="text-white-50 me-3">Terms & Conditions</a>
+                    <a href="#" class="text-white-50">Disclaimer</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html> 

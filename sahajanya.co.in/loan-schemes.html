@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Schemes | Sahajanya Bank</title>
+    <link rel="icon" type="image/svg+xml" href="images/logo-icon.svg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Kannada:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body { font-family: 'Poppins', Arial, sans-serif; }
+        .breadcrumb-area {
+            background: #f8f9fa;
+            border-bottom: 1px solid #e5e5e5;
+            padding: 1.5rem 0 1rem 0;
+        }
+        .breadcrumb {
+            background: none;
+            padding: 0;
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+        .breadcrumb .breadcrumb-item a { color: #003366; text-decoration: none; }
+        .breadcrumb .breadcrumb-item.active { color: #e30613; font-weight: 600; }
+        .loan-heading {
+            font-size: 2.25rem;
+            font-weight: 800;
+            color: #003366;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .loan-section {
+            padding: 2.5rem 0 2rem 0;
+        }
+        .loan-cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+        }
+        .loan-card {
+            background: #fff;
+            border-radius: 1rem;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+            padding: 2rem 1.5rem 1.5rem 1.5rem;
+            max-width: 340px;
+            flex: 1 1 300px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            transition: box-shadow 0.2s;
+        }
+        .loan-card:hover {
+            box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+        }
+        .loan-icon {
+            font-size: 2.5rem;
+            color: #e30613;
+            background: #ffc107;
+            border-radius: 50%;
+            width: 64px;
+            height: 64px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.25rem;
+        }
+        .loan-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #003366;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+        }
+        .loan-desc {
+            color: #222;
+            font-size: 1.05rem;
+            margin-bottom: 1.25rem;
+        }
+        .loan-btn {
+            background: #e30613;
+            color: #fff;
+            font-weight: 600;
+            border-radius: 2rem;
+            padding: 0.5rem 1.5rem;
+            border: none;
+            text-transform: uppercase;
+            font-size: 0.95rem;
+            letter-spacing: 0.5px;
+            transition: background 0.2s;
+        }
+        .loan-btn:hover {
+            background: #003366;
+            color: #ffc107;
+        }
+        @media (max-width: 991.98px) {
+            .loan-cards { gap: 1.5rem; }
+            .loan-card { max-width: 100%; }
+        }
+        @media (max-width: 767.98px) {
+            .loan-heading { font-size: 1.5rem; }
+            .loan-section { padding: 1.5rem 0; }
+            .loan-cards { flex-direction: column; gap: 1.25rem; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Bar and Navbar (reuse from index.html) -->
+    <div class="top-bar bg-gradient-primary text-white py-1">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center gap-3">
+                <span><i class="fas fa-phone-alt me-1"></i> 1800 123 4567</span>
+                <span class="d-none d-md-inline"><i class="fas fa-envelope me-1"></i> info@sahajanya.co.in</span>
+            </div>
+            <div class="d-flex align-items-center gap-3">
+                <button class="btn btn-sm btn-outline-light rounded-pill px-3" id="languageToggle">
+                    <i class="fas fa-globe me-1"></i>
+                    <span class="lang-en">ಕನ್ನಡ</span>
+                    <span class="lang-kn d-none">English</span>
+                </button>
+                <div class="social-links d-none d-md-flex gap-2">
+                    <a href="#" class="text-white" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-white" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-white" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-white" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-light shadow-sm bg-white sticky-top border-bottom">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2 py-2" href="index.html">
+                <img src="images/logo.png" alt="Sahajanya Bank" class="logo" style="height:48px;width:auto;">
+                <div class="d-none d-md-block">
+                    <span class="fw-bold text-primary fs-4 lh-1">Sahajanya Bank</span><br>
+                    <span class="text-muted small lh-1">A SMSCL Enterprise</span>
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                <ul class="navbar-nav mx-auto text-uppercase fw-semibold gap-lg-2">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about-us.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="loan-schemes.html">Loan Schemes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Financial Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Membership</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Downloads</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                </ul>
+                <div class="d-flex align-items-center gap-2 ms-lg-3">
+                    <a href="#login" class="btn btn-outline-primary rounded-pill px-3">Login</a>
+                    <a href="#register" class="btn btn-primary rounded-pill px-3">Register</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb and Heading -->
+    <div class="breadcrumb-area">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb mb-1">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Loan Schemes</li>
+                </ol>
+            </nav>
+            <div class="loan-heading">Loan Schemes</div>
+        </div>
+    </div>
+
+    <!-- Loan Schemes Section -->
+    <section class="loan-section">
+        <div class="container">
+            <div class="loan-cards">
+                <!-- Home Loan -->
+                <div class="loan-card">
+                    <div class="loan-icon"><i class="fas fa-home"></i></div>
+                    <div class="loan-title">Home Loan</div>
+                    <div class="loan-desc">Make your dream home a reality with flexible repayment options and attractive interest rates.</div>
+                </div>
+                <!-- Personal Loan -->
+                <div class="loan-card">
+                    <div class="loan-icon"><i class="fas fa-user-friends"></i></div>
+                    <div class="loan-title">Personal Loan</div>
+                    <div class="loan-desc">Meet your personal needs with our easy and quick personal loan schemes.</div>
+                </div>
+                <!-- Business Loan -->
+                <div class="loan-card">
+                    <div class="loan-icon"><i class="fas fa-briefcase"></i></div>
+                    <div class="loan-title">Business Loan</div>
+                    <div class="loan-desc">Empower your business with our tailored business loan solutions for growth and expansion.</div>
+                </div>
+                <!-- Education Loan -->
+                <div class="loan-card">
+                    <div class="loan-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <div class="loan-title">Education Loan</div>
+                    <div class="loan-desc">Invest in your future with our education loans for students pursuing higher studies.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (reuse from index.html) -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 mb-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white-50">About Us</a></li>
+                        <li><a href="#" class="text-white-50">Contact Us</a></li>
+                        <li><a href="#" class="text-white-50">Locate Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5>Products</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white-50">Savings Accounts</a></li>
+                        <li><a href="#" class="text-white-50">Loans</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5>Customer Service</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white-50">FAQs</a></li>
+                        <li><a href="#" class="text-white-50">Complaints</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5>Contact Us</h5>
+                    <address class="text-white-50">
+                        <p><i class="fas fa-map-marker-alt me-2"></i> 123 Financial District, Hyderabad, India</p>
+                        <p><i class="fas fa-phone-alt me-2"></i> 1800 123 4567</p>
+                        <p><i class="fas fa-envelope me-2"></i> info@sahajanya.co.in</p>
+                    </address>
+                </div>
+            </div>
+            <hr class="bg-secondary">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2025 Sahajanya Bank. All Rights Reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-white-50 me-3">Privacy Policy</a>
+                    <a href="#" class="text-white-50 me-3">Terms & Conditions</a>
+                    <a href="#" class="text-white-50">Disclaimer</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+ 

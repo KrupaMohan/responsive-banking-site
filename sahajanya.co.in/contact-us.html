@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Sahajanya Bank</title>
+    <link rel="icon" type="image/svg+xml" href="images/logo-icon.svg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Kannada:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body { font-family: 'Poppins', Arial, sans-serif; }
+        .breadcrumb-area {
+            background: #f8f9fa;
+            border-bottom: 1px solid #e5e5e5;
+            padding: 1.5rem 0 1rem 0;
+        }
+        .breadcrumb {
+            background: none;
+            padding: 0;
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+        .breadcrumb .breadcrumb-item a { color: #003366; text-decoration: none; }
+        .breadcrumb .breadcrumb-item.active { color: #e30613; font-weight: 600; }
+        .contact-heading {
+            font-size: 2.25rem;
+            font-weight: 800;
+            color: #003366;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .contact-section {
+            padding: 2.5rem 0 2rem 0;
+        }
+        .contact-box {
+            background: #fff;
+            border: 2px solid #e30613;
+            border-radius: 1rem;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+            padding: 2rem 1.5rem 1.5rem 1.5rem;
+            margin-bottom: 2rem;
+        }
+        .contact-info-list {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 0;
+        }
+        .contact-info-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1.25rem;
+            font-size: 1.08rem;
+        }
+        .contact-info-list i {
+            color: #e30613;
+            font-size: 1.4rem;
+            min-width: 2rem;
+            text-align: center;
+        }
+        .contact-info-list strong {
+            color: #003366;
+            font-weight: 700;
+        }
+        .contact-info-list address {
+            font-style: normal;
+            color: #222;
+        }
+        @media (max-width: 767.98px) {
+            .contact-heading { font-size: 1.5rem; }
+            .contact-section { padding: 1.5rem 0; }
+            .contact-box { padding: 1.25rem 1rem; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Bar and Navbar (reuse from index.html) -->
+    <div class="top-bar bg-gradient-primary text-white py-1">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center gap-3">
+                <span><i class="fas fa-phone-alt me-1"></i> 1800 123 4567</span>
+                <span class="d-none d-md-inline"><i class="fas fa-envelope me-1"></i> info@sahajanya.co.in</span>
+            </div>
+            <div class="d-flex align-items-center gap-3">
+                <button class="btn btn-sm btn-outline-light rounded-pill px-3" id="languageToggle">
+                    <i class="fas fa-globe me-1"></i>
+                    <span class="lang-en">ಕನ್ನಡ</span>
+                    <span class="lang-kn d-none">English</span>
+                </button>
+                <div class="social-links d-none d-md-flex gap-2">
+                    <a href="#" class="text-white" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-white" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-white" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-white" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-light shadow-sm bg-white sticky-top border-bottom">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2 py-2" href="index.html">
+                <img src="images/logo.png" alt="Sahajanya Bank" class="logo" style="height:48px;width:auto;">
+                <div class="d-none d-md-block">
+                    <span class="fw-bold text-primary fs-4 lh-1">Sahajanya Bank</span><br>
+                    <span class="text-muted small lh-1">A SMSCL Enterprise</span>
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                <ul class="navbar-nav mx-auto text-uppercase fw-semibold gap-lg-2">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about-us.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="contact-us.html">Contact</a></li>
+                </ul>
+                <div class="d-flex align-items-center gap-2 ms-lg-3">
+                    <a href="#login" class="btn btn-outline-primary rounded-pill px-3">Login</a>
+                    <a href="#register" class="btn btn-primary rounded-pill px-3">Register</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb and Heading -->
+    <div class="breadcrumb-area">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb mb-1">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Contact Us</li>
+                </ol>
+            </nav>
+            <div class="contact-heading">Contact Us</div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-7">
+                    <div class="contact-box">
+                        <ul class="contact-info-list">
+                            <li>
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div>
+                                    <strong>Address:</strong><br>
+                                    <address>No 996/22/2, 4th cross, RPC layout, Hampi Nagara, Bangalore, Karnataka-560104</address>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fas fa-phone-alt"></i>
+                                <div>
+                                    <strong>Phone:</strong><br>
+                                    <a href="tel:08023390310" class="text-decoration-none text-dark">080-2339 0310</a>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fas fa-envelope"></i>
+                                <div>
+                                    <strong>Email:</strong><br>
+                                    <a href="mailto:smscl2013@gmail.com" class="text-decoration-none text-dark">smscl2013@gmail.com</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (reuse from index.html) -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 mb-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white-50">About Us</a></li>
+                        <li><a href="#" class="text-white-50">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5>Customer Service</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white-50">FAQs</a></li>
+                        <li><a href="#" class="text-white-50">Complaints</a></li>
+                        <li><a href="#" class="text-white-50">Locate Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5>Contact Us</h5>
+                    <address class="text-white-50">
+                        <p><i class="fas fa-map-marker-alt me-2"></i> 123 Financial District, Hyderabad, India</p>
+                        <p><i class="fas fa-phone-alt me-2"></i> 1800 123 4567</p>
+                        <p><i class="fas fa-envelope me-2"></i> info@sahajanya.co.in</p>
+                    </address>
+                </div>
+            </div>
+            <hr class="bg-secondary">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2025 Sahajanya Bank. All Rights Reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-white-50 me-3">Privacy Policy</a>
+                    <a href="#" class="text-white-50 me-3">Terms & Conditions</a>
+                    <a href="#" class="text-white-50">Disclaimer</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html> 
